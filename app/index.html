@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>chakra | app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #383838;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .header {
+            color: white;
+            font-size: 60px; /* フォントサイズを調整 */
+            font-weight: bold; /* 太文字にする */
+            font-family: 'Kosugi', sans-serif; /* Kosugiフォントを適用 */
+            margin-top: 20px; /* 上部のマージンを追加 */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #6b8bc2;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-family: 'Kosugi', sans-serif; /* Kosugiフォントを適用 */
+            border: 3px solid #374d73; /* 縁取りを太くする */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center; /* テキストを中央寄せにする */
+        }
+
+        .button:hover {
+            background-color: #374d73;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Apps</div>
+    <p></p>
+    <div class="button-container">
+        <a href="https://chakraproxy.xyz/app/chakraproxy/" class="button">ChakraProxy</a>
+        <a href="https://chakraproxy.xyz/app/finder/" class="button">ちんこのデカさ特定ツール</a>
+    </div>
+</body>
+</html>
