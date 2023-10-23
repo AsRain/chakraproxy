@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>サイズ特定ツール</title>
+</head>
+<body>
+    <h1>ちんこのサイズ特定ツール</h1>
+
+    <video id="camera" autoplay></video>
+    <button id="startCamera">特定を開始！</button>
+    <button id="takePhoto" style="display: none;">写真を撮る</button>
+    <canvas id="photoCanvas" style="display: none;"></canvas>
+    <img id="capturedPhoto" style="display: none;" alt="Captured Photo">
+    <button id="reset" style="display: none;">リセット</button>
+    <p id="measurementText" style="display: none;"></p>
+
+    <script>
+        let videoStream;
+
+        // カメラを起動する関数
+        async function startCamera() {
+            try {
+                videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const camera = document.getElementById('camera');
+                camera.srcObject = videoStream;
+                document.getElementById('startCamera').style.display = 'none';
+                document.getElementById('takePhoto').style.display = 'block';
+            } catch (error) {
+                console.error('カメラの起動に失敗しました: ', error);
+            }
+        }
+
+        // 写真を撮る関数
+        function takePhoto() {
+            const camera = document.getElementById('camera');
+            const photoCanvas = document.getElementById('photoCanvas');
+            const context = photoCanvas.getContext('2d');
+            photoCanvas.width = camera.videoWidth;
+            photoCanvas.height = camera.videoHeight;
+            context.drawImage(camera, 0, 0, photoCanvas.width, photoCanvas.height);
+            const photoURL = photoCanvas.toDataURL('image/png');
+            const capturedPhoto = document.getElementById('capturedPhoto');
+            capturedPhoto.src = photoURL;
+            capturedPhoto.style.display = 'block';
+            document.getElementById('takePhoto').style.display = 'none';
+            document.getElementById('reset').style.display = 'block';
+            const measurementText = document.getElementById('measurementText');
+            const randomLength = getRandomLength(5, 30);
+            measurementText.innerText = `あなたのちんこの長さは ${randomLength} cm`;
+            measurementText.style.display = 'block';
+            camera.srcObject = null; // カメラを停止
+            videoStream.getTracks().forEach(track => track.stop());
+        }
+
+        // リセットボタンのクリック時の処理
+        document.getElementById('reset').addEventListener('click', function() {
+            location.reload(); // サイトを再読み込み
+        });
+
+        function getRandomLength(min, max) {
+            return (Math.random() * (max - min) + min).toFixed(1);
+        }
+
+        document.getElementById('startCamera').addEventListener('click', startCamera);
+        document.getElementById('takePhoto').addEventListener('click', takePhoto);
+    </script>
+</body>
+</html>
