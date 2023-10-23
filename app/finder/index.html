@@ -1,23 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>サイズ特定 | 選択</title>
+    <title>サイズ特定ツール</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #cameraFeed {
+            width: 100%;
+            max-width: 640px;
+        }
+        #faceSizeText {
+            font-size: 24px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>ちんこ / 胸のサイズ特定サイト</h1>
-    <p>あくまでジョークツールです。　また、試験段階です。<p>
-    <button id="button1">ちんこのサイズ特定ツール</button>
-    <button id="button2">胸のサイズ特定ツール</button>
+    <h1>ちんこのデカさサイズ特定ツール <span style="font-size: 15px;"> ※あくまでジョークです</span></h1>
+
+    <button id="startCamera">カメラを起動</button>
+    <button id="takePhoto" style="display: none;">写真を撮る</button>
+    <video id="cameraFeed" autoplay></video>
+    <img id="capturedPhoto" style="display: none; background-color: white;"> <!-- 背景色を白に設定 -->
+    <button id="resetButton" style="display: none;">リセット</button>
+    <div id="faceSizeText" style="display: none;"></div>
 
     <script>
-        // ボタン1がクリックされたときの処理
-        document.getElementById("button1").addEventListener("click", function() {
-            window.location.href = "chinko.html";
+        let stream;
+        const cameraFeed = document.getElementById('cameraFeed');
+        const takePhotoButton = document.getElementById('takePhoto');
+        const capturedPhoto = document.getElementById('capturedPhoto');
+        const resetButton = document.getElementById('resetButton');
+        const faceSizeText = document.getElementById('faceSizeText');
+
+        // カメラを起動する処理
+        document.getElementById('startCamera').addEventListener('click', async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                cameraFeed.srcObject = stream;
+                document.getElementById('startCamera').style.display = 'none';
+                takePhotoButton.style.display = 'block';
+                cameraFeed.style.display = 'block'; // カメラを表示
+            } catch (error) {
+                console.error('カメラの起動に失敗しました:', error);
+            }
         });
 
-        // ボタン2がクリックされたときの処理
-        document.getElementById("button2").addEventListener("click", function() {
-            window.location.href = "oppai.html";
+        // 写真を撮る処理
+        takePhotoButton.addEventListener('click', () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = cameraFeed.videoWidth;
+            canvas.height = cameraFeed.videoHeight;
+            const context = canvas.getContext('2d');
+
+            // 背景を白に設定
+            context.fillStyle = 'white';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            context.drawImage(cameraFeed, 0, 0, canvas.width, canvas.height);
+            capturedPhoto.src = canvas.toDataURL('image/png');
+            capturedPhoto.style.display = 'block';
+            takePhotoButton.style.display = 'none';
+            resetButton.style.display = 'block'; // リセットボタンを表示
+            faceSizeText.style.display = 'block'; // テキストを表示
+            stream.getTracks().forEach(track => track.stop()); // カメラストリームを停止
+
+            // カメラを非表示にする
+            cameraFeed.style.display = 'none';
+
+            // のサイズをランダムに生成
+            const faceSize = Math.floor(Math.random() * 23) + 3; // サイズは3から25までのランダムな値
+
+            // テキスト要素に表示
+            faceSizeText.textContent = `あなたのちんこのサイズは${faceSize}cmです`;
+        });
+
+        // リセットボタンの処理
+        resetButton.addEventListener('click', () => {
+            location.reload(); // ページを再読み込み
         });
     </script>
 </body>
