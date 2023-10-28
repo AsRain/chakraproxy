@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChakraProxyが使えない (エラー、ブロックされる) 時の対処方法</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zen+Maru+Gothic" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif; /* Zen Maru Gothicを指定 */
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .return-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .return-button a {
+            background-color: #6e6e6e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+        }
+
+        .return-button a:hover {
+            background-color: #a3a3a3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1500px;
+            margin: 80px auto 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chakra Blog</h1>
+        <div class="return-button">
+            <a href="https://chakraproxy.xyz"><i class="fa fa-arrow-left"></i> 戻る</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>ChakraProxyが使えない (エラー、ブロックされる) 時の対処方法</h2>
+            <h3>まず、ChakraProxyでエラー等が起きる際の対処法を紹介します</h1>
+            <p>
+            1. コントロールキー + Hを押して履歴を開く (またはchrome://history/と入力)<br>
+            2. 左側にある 閲覧履歴データをの削除 をクリック<br>
+            3. 期間は全期間、Cookieと他のサイトのデータ に☑を入れ、データを削除をクリック
+            </p>
+            <img src="cook.png" alt="cookie">
+            <p>
+            4. ChakraProxyを開きなおしたら大抵は開けるようになります。<br>
+            ※以上の手順を行ってもエラーが出る場合は対処するので教えてください<br>
+            </p>
+            <h3>次はChakraProxyで開いたサイトが稀にブロックされる場合の対処方法を教えます</h3>
+            <p>
+            1. ChakraProxyで https://webtoppings.bar/ を開きます。<br>
+            2. 「Step 1: Pick a server」はいじらなくて大丈夫です。<br>
+            　「Step 2: Choose your base」 にブロックされるサイトのURLを入力してください。<br>
+            　「Step 3: Choose a topping (optional)」 もなにもいじらなくてOKです。<br>
+            </p>
+            <img src="piza.png" alt="サイト">
+            <p>
+            3. Let's browse! を押して数秒待ったら完了！<br>
+            </p>
+            <h3>最後に</h3>
+            <p>
+            今回は、ChakraProxyでよく来る問い合わせ、エラーとブロックの対処方法を紹介しました。<br>
+            今後、このような形でブログを書いていこうと思うのでよろしくお願いします！ (ブログのデザインが試験段階なので見ずらいかもしれません。意見などがあれば教えてください)<br>
+            今回紹介したものでわからないもの、他のお問い合わせ等がありましたら、お気軽にお問い合わせ下さい。
+        </p>
+    </div>
+</body>
+</html>

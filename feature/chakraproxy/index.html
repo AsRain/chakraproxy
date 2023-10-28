@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ChakraProxy V2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="snow.css" type="text/css">
+    <link rel="icon" type="image/png" href="..."><!-- Replace ... with your favicon URL -->
+    <style>
+        /* Add the button styling CSS here */
+        button {
+            --glow-color: rgb(217, 176, 255);
+            --glow-spread-color: rgba(191, 123, 255, 0.781);
+            --enhanced-glow-color: rgb(231, 206, 255);
+            --btn-color: rgb(100, 61, 136);
+            border: .25em solid var(--glow-color);
+            padding: 1em 3em;
+            color: var(--glow-color);
+            font-size: 15px;
+            font-weight: bold;
+            background-color: var(--btn-color);
+            border-radius: 1em;
+            outline: none;
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+            text-shadow: 0 0 .5em var(--glow-color);
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Adjust the positioning as needed */
+            transition: all 0.3s;
+        }
+
+        button::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 120%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--glow-spread-color);
+            filter: blur(2em);
+            opacity: .7;
+            transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+        }
+
+        /* Visit https://democoding.in/ for more free CSS animation */
+        button:hover {
+            color: var(--btn-color);
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+        }
+
+        button:active {
+            box-shadow: 0 0 0.6em .25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 .5em .25em var(--glow-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="snow_particlesjs"></div> <!-- This is your snow effect container -->
+
+    <img src="2.0.png" alt="Logo" class="logo" width="325" height="80">
+    <!-- Your other content goes here -->
+
+    
+    <div class="container">
+        <!-- Other content within the container -->
+        <div id="r4-widget-form"></div> <!-- This is where you can place your widget -->
+    </div>
+
+    <img src="image.png" alt="test" id="test-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; z-index: 999;">
+
+    <!-- Widget script -->
+    <script async src="https://www.nextchakra.com/widget/widget.js" data-id="r4-widget-connection"></script>
+
+    <!-- Snow effect script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scriptdayo.js"></script>
+
+    <!-- JavaScript for toggling the image -->
+    <script>
+        let shiftKeyPressed = false;
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Shift") {
+                shiftKeyPressed = !shiftKeyPressed;
+                if (shiftKeyPressed) {
+                    document.getElementById("test-image").style.display = "block";
+                } else {
+                    document.getElementById("test-image").style.display = "none";
+                }
+            }
+        });
+    </script>
+
+    <!-- Your button code -->
+    <button id="myButton">ホームに戻る！</button>
+
+    <script>
+        // Button click event to redirect to 
+        document.getElementById("myButton").addEventListener("click", function() {
+            window.location.href = "https://chakraproxy.xyz/";
+        });
+    </script>
+</body>
+</html>

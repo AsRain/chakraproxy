@@ -1,10 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <title>Chakra</title>
+    <link rel="icon" href="/texture/logo.ico">
+    <link rel="apple-touch-icon" href="texture/logo.png">
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+        }
+
+        header:hover {
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .feature-box, .announcement-box {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-box:hover, .announcement-box:hover {
+            background-color: #f0f0f0;
+            transform: translateX(10px);
+        }
+
+        .box-image {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+        .box-image.feature1 {
+            background-image: url('texture/gra.png');
+        }
+
+        .box-image.feature2 {
+            background-image: url('texture/his.png');
+        }
+
+        .box-image.feature3 {
+            background-image: url('texture/game.png');
+        }
+
+        .box-image.announcement1 {
+            background-image: url('texture/bell.png');
+        }
+
+        .box-image.announcement2 {
+            background-image: url('texture/money011.png');
+        }
+
+        .box-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <a href="https://chakraproxy.xyz/app/chakraproxy/">chakraproxy-app</a></p>
-<meta http-equiv="refresh" content="0; url=https://chakraproxy.xyz/app/chakraproxy/">
+    <header onclick="location.href='index.html'">
+        <p>学校を論破するサイトへようこそ（笑）</p>
+        <h1>Chakra</h1>
+    </header>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature-box" onclick="location.href='feature/chakraproxy/index.html'">
+            <div class="box-image feature1"></div>
+            <div class="box-text">
+                <h3>ChakraProxy (フィルタリング回避)</h3>
+                <p>フィルタリング回避したいサイトのURLまたはサービスを選択することでブロックされずに閲覧できます ※ブロックされたり開けない場合は下にある お知らせ を参照</p>
+            </div>
+        </div>
+        <div class="feature-box" onclick="location.href='feature/history/index.html'">
+            <div class="box-image feature2"></div>
+            <div class="box-text">
+                <h3>履歴スパム</h3>
+                <p>履歴を見られたくない時に使える、履歴を埋めることができるツールです！</p>
+            </div>
+        </div>
+        <div class="feature-box" onclick="location.href='feature/games/index.html'">
+            <div class="box-image feature3"></div>
+            <div class="box-text">
+                <h3>ゲームサイト一覧</h3>
+                <p>ゲームができるサイトの一覧です。ブロックされている場合は上にある ChakraProxy といっしょに使うと良いです！</p>
+            </div>
+        </div>
+    </section>
+    <section id="announcements">
+        <h2>Blog</h2>
+        <div class="announcement-box" onclick="location.href='article/proxy/index.html'">
+            <div class="box-image announcement1"></div>
+            <div class="box-text">
+                <h3>ChakraProxyが使えない (エラー、ブロックされる) 時の対処方法</h3>
+                <p>本来、ChakraProxyはブロックされること等はありませんが、例外もあるのでそれの対処方法を紹介します！</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
