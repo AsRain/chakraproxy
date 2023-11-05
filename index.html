@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <title>Chakra</title>
-    <link rel="icon" href="/texture/logo.ico">
+    <title>Chakron.lol</title>
+    <link rel="icon" href="texture/logo.ico">
     <link rel="apple-touch-icon" href="texture/logo.png">
     <style>
         body {
             font-family: 'Zen Maru Gothic', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ebf3fa;
         }
 
         header {
-            background-color: #333;
+            background-color: #6ba9c2;
             color: #fff;
             text-align: center;
             padding: 20px;
-            font-size: 32px;
+            font-size: 20px;
         }
 
         header:hover {
@@ -35,7 +35,7 @@
             margin: 20px;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.259);
         }
 
         h2 {
@@ -54,7 +54,7 @@
         }
 
         .feature-box:hover, .announcement-box:hover {
-            background-color: #f0f0f0;
+            background-color: rgba(197, 215, 255, 0.258);
             transform: translateX(10px);
         }
 
@@ -90,7 +90,11 @@
         }
 
         .box-image.announcement2 {
-            background-image: url('texture/money011.png');
+            background-image: url('texture/money.png');
+        }
+
+        .box-image.announcement3 {
+            background-image: url('texture/draw.png');
         }
 
         .box-text {
@@ -112,13 +116,23 @@
     <header onclick="location.href='index.html'">
         <h1>Chakra</h1>
     </header>
+    <section id="announcements">
+        <h2>ブログ / お知らせ</h2>
+        <div class="announcement-box" onclick="location.href='https://forms.gle/AvYaG8TPLeVVvEJP9'">
+            <div class="box-image announcement2"></div>
+            <div class="box-text">
+                <h3>アンケートのご協力をお願いします！</h3>
+                <p>ユーザー数の把握、意見、感想等を確認、調べたいのでご協力をお願いします <b>(早くて1分で終わります)</b></p>
+            </div>
+        </div>
+    </section>
     <section id="features">
-        <h2>Features</h2>
-        <div class="feature-box" onclick="location.href='https://chakraproxy.xyz/feature/chakraproxy/'">
+        <h2>機能</h2>
+        <div class="feature-box" onclick="location.href='https://sites.google.com/view/chakron-prx/'">
             <div class="box-image feature1"></div>
             <div class="box-text">
-                <h3>ChakraProxy (フィルタリング回避)　　★復活しました★</h3>
-                <p>フィルタリング回避したいサイトのURLまたはサービスを選択することでブロックされずにサイトを閲覧できます！ ※ブロックされたり開けない場合は下にある Blog を参照</p>
+                <h3>ChakraProxy V3！！</h3>
+                <p>V3の変更点: アジアサーバーに変更したため通信の<b>高速化</b>、開いたサイトの<b>履歴が残らない</b>、<b>エラーの修正</b>など</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='feature/history/index.html'">
@@ -135,30 +149,7 @@
                 <p>楽しいゲームをたくさん集めました！ サイト上ですぐプレイできます！！</p>
             </div>
         </div>
-        <div class="feature-box" onclick="location.href='https://chatgptdemo.ai/chatgpt/'">
-            <div class="box-image feature4"></div>
-            <div class="box-text">
-                <h3>ChatGPT　　★使えないバグを修正しました★</h3>
-                <p>ログイン不要で使えるChatGPTです！</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='https://iv.nboeck.de/feed/popular'">
-            <div class="box-image feature5"></div>
-            <div class="box-text">
-                <h3>Youtube</h3>
-                <p>Youtubeを広告なしで高速で見ることができます！</p>
-            </div>
-        </div>
     </section>
-    <section id="announcements">
-        <h2>Blog</h2>
-        <div class="announcement-box" onclick="location.href='article/proxy/index.html'">
-            <div class="box-image announcement1"></div>
-            <div class="box-text">
-                <h3>ChakraProxyが使えない (エラー、ブロックされる) 時の対処方法</h3>
-                <p>基本、ChakraProxyはブロックされることはありませんが、例外もあるのでそれやエラーの対処方法紹介します！</p>
-            </div>
-        </div>
-    </section>
+    <p>Chakra V11052023</p>
 </body>
 </html>
