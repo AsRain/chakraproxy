@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chakra | ルーレット</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #new-item, #add-item, #spin-roulette, #reset-page {
+            margin: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #new-item {
+            width: 200px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 3px solid #000;
+        }
+        #add-item, #spin-roulette {
+            margin-left: 10px;
+            background-color: #63aaf6;
+            color: #fff;
+            border: none;
+        }
+        #reset-page {
+            background-color: #ff7b7b;
+            color: #fff;
+            border: none;
+        }
+        #item-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        #item-list li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative; /* 追加：位置を設定 */
+        }
+        #item-list li:hover {
+            background-color: #f0f0f0;
+        }
+        .delete-button { /* 追加：削除ボタンのスタイル */
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #ff7b7b;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ルーレット</h1>
+
+    <input type="text" id="new-item" placeholder="内容を入力...">
+    <button id="add-item">追加</button>
+    <button id="spin-roulette">ルーレット開始</button>
+    <button id="reset-page">リセット</button>
+
+    <ul id="item-list"></ul>
+
+    <script>
+        const newItemInput = document.getElementById('new-item');
+        const addItemButton = document.getElementById('add-item');
+        const spinRouletteButton = document.getElementById('spin-roulette');
+        const resetPageButton = document.getElementById('reset-page');
+        const itemList = document.getElementById('item-list');
+        const items = [];
+
+        addItemButton.addEventListener('click', () => {
+            const newItemText = newItemInput.value.trim();
+            if (newItemText !== '') {
+                items.push(newItemText);
+                const newItemElement = document.createElement('li');
+                newItemElement.textContent = newItemText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'delete-button';
+                deleteButton.textContent = '削除';
+
+                deleteButton.addEventListener('click', () => {
+                    const index = items.indexOf(newItemText);
+                    if (index !== -1) {
+                        items.splice(index, 1);
+                    }
+                    itemList.removeChild(newItemElement);
+                });
+
+                newItemElement.appendChild(deleteButton);
+                itemList.appendChild(newItemElement);
+
+                newItemInput.value = '';
+            }
+        });
+
+        spinRouletteButton.addEventListener('click', () => {
+            if (items.length > 0) {
+                const randomIndex = Math.floor(Math.random() * items.length);
+                alert(`選ばれた項目: ${items[randomIndex]}`);
+            } else {
+                alert('項目がありません。項目を追加してください。');
+            }
+        });
+
+        resetPageButton.addEventListener('click', () => {
+            location.reload(); // ページを再読み込み
+        });
+    </script>
+</body>
+</html>
