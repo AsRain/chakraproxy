@@ -21,9 +21,6 @@
             text-align: center;
             padding: 20px;
             font-size: 20px;
-        }
-
-        header:hover {
             cursor: pointer;
         }
 
@@ -38,24 +35,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.259);
         }
 
-        h2 {
-            font-size: 24px;
+        h2, h3 {
             margin: 0;
         }
 
-        .feature-box, .announcement-box {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            position: relative;
-            transition: transform 0.3s ease-in-out;
+        h2 {
+            font-size: 24px;
         }
 
-        .feature-box:hover, .announcement-box:hover {
-            background-color: rgba(197, 215, 255, 0.258);
-            transform: translateX(10px);
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            margin: 5px 0;
         }
 
         .box-image {
@@ -65,70 +58,52 @@
             margin-right: 10px;
         }
 
-        .box-image.feature1 {
-            background-image: url('texture/gra.png');
-        }
+        .feature1 { background-image: url('texture/v3.png'); }
+        .feature2 { background-image: url('texture/history.png'); }
+        .feature3 { background-image: url('texture/game.png'); }
+        .feature4 { background-image: url('texture/v2.png'); }
+        .feature7 { background-image: url('texture/yt.png'); }
+        .feature8 { background-image: url('texture/rr.png'); }
+        .feature9 { background-image: url('texture/mc.png'); }
 
-        .box-image.feature2 {
-            background-image: url('texture/his.png');
-        }
-
-        .box-image.feature3 {
-            background-image: url('texture/game.png');
-        }
-
-        .box-image.feature4 {
-            background-image: url('texture/gpt.png');
-        }
-
-        .box-image.feature5 {
-            background-image: url('texture/chat.png');
-        }
-
-        .box-image.feature6 {
-            background-image: url('texture/chat.png');
-        }
-
-        .box-image.feature7 {
-            background-image: url('texture/yt.png');
-        }
-
-        .box-image.feature8 {
-            background-image: url('texture/rr.png');
-        }
-
-        .box-image.feature9 {
-            background-image: url('texture/mc.png');
-        }
-
-        .box-image.announcement2 {
-            background-image: url('texture/money.png');
-        }
-
-        .box-image.announcement3 {
-            background-image: url('texture/line.png');
-        }
-
-        .box-image.announcement4 {
-            background-image: url('texture/ans.png');
-        }
-
-        .box-image.announcement5 {
-            background-image: url('texture/money2.png');
-        }
+        .announcement2 { background-image: url('texture/ank.png'); }
+        .announcement3 { background-image: url('texture/line.png'); }
+        .announcement4 { background-image: url('texture/ans.png'); }
 
         .box-text {
             display: flex;
             flex-direction: column;
         }
 
-        h3 {
-            font-size: 20px;
-            margin: 0;
+        .feature-box, .announcement-box {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            position: relative;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
-        p {
-            margin: 5px 0;
+        .feature-box:hover, .announcement-box:hover {
+            background-color: rgba(197, 215, 255, 0.258);
+            transform: translateX(10px);
+        }
+
+        /* Add more specific class names for better organization */
+        .feature-box:hover, .announcement-box:hover {
+            background-color: rgba(197, 215, 255, 0.258);
+            transform: translateX(10px);
+        }
+
+        .feature-box:hover {
+            background-color: rgba(197, 215, 255, 0.258);
+            transform: translateX(10px);
+        }
+
+        .announcement-box:hover {
+            background-color: rgba(197, 215, 255, 0.258);
+            transform: translateX(10px);
         }
     </style>
 </head>
@@ -141,50 +116,50 @@
         <p>履歴スパムがQubena以外に対応｜Youtubeが復活｜一部の機能しないリンクを修正｜ルーレット機能｜ChakraProxyV3の修正と画面切り替え｜</p>
     </section>
     <section id="announcements">
-        <h2>ブログ / お知らせ</h2>
+        <h2>ブログ / お知らせ (3)</h2>
         <div class="announcement-box" onclick="location.href='https://forms.gle/AvYaG8TPLeVVvEJP9'">
             <div class="box-image announcement2"></div>
             <div class="box-text">
-                <h3>アンケートのご協力をお願いします！</h3>
-                <p>ユーザー数の把握、意見、感想等を確認、調べたいのでご協力をお願いします <b>(早くて1分で終わります)</b></p>
+                <h3>意見、ご感想、要望機能等はこちら</h3>
+                <p>Chakraをより良くするためにご意見等を聞かせて下さい <b>(早くて1分で終わります)</b></p>
             </div>
         </div>
         <div class="announcement-box" onclick="location.href='answer.html'">
             <div class="box-image announcement4"></div>
             <div class="box-text">
-                <h3>アンケートの回答</h3>
-                <p>上のアンケートに来た意見等に回答します</p>
+                <h3>フォームの回答</h3>
+                <p>上のフォームに来た ご意見 ご感想 要望機能等 に回答します</p>
             </div>
         </div>
         <div class="announcement-box" onclick="location.href='line.html'">
             <div class="box-image announcement3"></div>
             <div class="box-text">
                 <h3>公式LINEグループができました！</h3>
-                <p>ブロックされた際の新URLや、アップデートのお知らせ、要望機能の報告、サポートなど...</p>
+                <p>ブロックされた際の新URLや アップデートのお知らせ 要望機能の報告 サポートなど...</p>
             </div>
         </div>
     </section>
     <section id="features">
-        <h2>機能</h2>
+        <h2>機能 (7)</h2>
         <div class="feature-box" onclick="location.href='https://v3.prx-chakron.lol/'">
             <div class="box-image feature1"></div>
             <div class="box-text">
-                <h3>ChakraProxy V3</h3>
-                <p>通信の<b>高速化</b>、開いたサイトの<b>履歴が残らない</b>、<b>エラーの修正</b>など<br>
-                注意: V3ではR18コンテンツ(いわゆるエロ動画等)が見れないので、見たいのであればV2をご利用ください。</p>
+                <h3>ChakraProxy v3</h3>
+                <p>フィルタリング回避ツールです！<br>
+                <b>注意</b>: V3ではR18コンテンツ(いわゆるエロ動画等)が見れないので、見たいのであればV2をご利用ください。</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='feature/chakraproxy/index.html'">
             <div class="box-image feature4"></div>
             <div class="box-text">
-                <h3>ChakraProxy V2</h3>
-                <p>旧ChakraProxyです、ChakraProxy V3のアクセスが集中して開けない場合にご利用ください。</p>
+                <h3>ChakraProxy v2</h3>
+                <p>旧バージョンです。 v3が使えない場合等にご利用ください。</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='feature/history/index.html'">
             <div class="box-image feature2"></div>
             <div class="box-text">
-                <h3>履歴スパム ※Qubena以外も可能になりました！</h3>
+                <h3>履歴スパム</h3>
                 <p>履歴を見られたくない時に使える、履歴を埋めることができるツールです！</p>
             </div>
         </div>
@@ -198,15 +173,8 @@
         <div class="feature-box" onclick="location.href='https://sites.google.com/view/chakra-games/'">
             <div class="box-image feature3"></div>
             <div class="box-text">
-                <h3>ゲーム</h3>
-                <p>楽しいゲームをたくさん集めました！ サイト上ですぐプレイできます！！</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='feature/roulette/index.html'">
-            <div class="box-image feature8"></div>
-            <div class="box-text">
-                <h3>ルーレット</h3>
-                <p>自分で決めた内容をルーレットで決めることができます</p>
+                <h3>ゲーム / 準備中、水曜日公開</h3>
+                <p>楽しいゲームをたくさん集めました！ ダウンロード不要 / サイト上ですぐにプレイ可能</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='Minecraft/index.html'">
@@ -214,6 +182,13 @@
             <div class="box-text">
                 <h3>Minecraft</h3>
                 <p>サイト上でMinecraft Java版をマルチプレイできます！！</p>
+            </div>
+        </div>
+        <div class="feature-box" onclick="location.href='feature/roulette/index.html'">
+            <div class="box-image feature8"></div>
+            <div class="box-text">
+                <h3>ルーレット</h3>
+                <p>人生の決断などに。</p>
             </div>
         </div>
     </section>
