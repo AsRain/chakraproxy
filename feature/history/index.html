@@ -2,11 +2,26 @@
 <html>
 <head>
     <title>履歴スパムツール</title>
+    <script>
+        function copyToClipboard(text) {
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+        }
+
+        function handleClickAndRedirect(accessKey, redirectUrl) {
+            copyToClipboard(accessKey);
+            window.location.href = redirectUrl;
+        }
+    </script>
 </head>
 <body>
     <h1>モードを選択してください</h1>
-    <button onclick="location.href='qubena.html'">Qubena</button>
-    <button onclick="location.href='google.html'">Google</button>
-    <button onclick="location.href='custom.html'">カスタム</button>
+    <button onclick="handleClickAndRedirect('accesskey_qubena', 'qubena.html')">Qubena</button>
+    <button onclick="handleClickAndRedirect('accesskey_google', 'google.html')">Google</button>
+    <button onclick="handleClickAndRedirect('accesskey_custom', 'custom.html')">カスタム</button>
 </body>
 </html>

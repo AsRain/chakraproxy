@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Chakra | LINE</title>
     <link rel="icon" href="texture/logo.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .qa {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 20px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .answer {
+            margin-top: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>参加希望者は開発者に直接お知らせ、または友達に招待してもらってください</h1>
+    <a href="index.html" class="back-button">戻る</a>
 
-    <!-- 戻るボタンを設置 -->
-    <button onclick="goToChakraProxy()">戻る</button>
+    <div class="qa">
+                <h1>参加希望者は開発者または友達に招待してもらってください。</h1>
+        </div>
+    </div>
 
-    <script>
-        function goToChakraProxy() {
-            // chakraproxy.xyzにリダイレクト
-            window.location.href = "index.html";
-        }
-    </script>
 </body>
 </html>

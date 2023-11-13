@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>未設定</title>
-       <link rel="shortcut icon" href="none.ico">
+    <title>Google</title>
+    <link rel="shortcut icon" href="google_icon-icons.com_62736.ico">
+    <!-- クリップボードの中身がまだ確認できていない状態のときは、サイトを非表示にする -->
+    <style>
+        body {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>カスタム履歴スパム</h1>
-
-    <!-- タイトル入力ボックス -->
-    <label for="newTitle"></label>
-    <input type="text" id="newTitle" placeholder="スパムしたいテキストを入力してください">
-
-    <!-- 適用ボタン -->
-    <button id="applyTitle">適用</button>
-
+    <h1>履歴スパムツール</h1>
+    <p>履歴をスパム中...<br> 少しだけ放置した後、履歴を見てみてください！</p>
 
     <!-- 戻るボタンを設置 -->
     <button onclick="goToChakraProxy()">戻る</button>
@@ -40,14 +41,26 @@
             window.location.href = "https://chakron.lol/";
         }
 
-        // タイトル適用ボタンのクリックイベントハンドラ
-        document.getElementById("applyTitle").addEventListener("click", function() {
-            const newTitle = document.getElementById("newTitle").value;
-            document.title = newTitle;
-        });
+        // クリップボードの内容を確認する関数
+        function checkClipboard() {
+            navigator.clipboard.readText().then(clipboardText => {
+                if (clipboardText === "accesskey_qubena") {
+                    // クリップボードに指定の文字列があればサイトを表示
+                    alert("クリップボードの内容が確認されました！");
+                    document.body.style.display = "block"; // サイトを表示する
+                } else {
+                    // クリップボードに指定の文字列がなければリダイレクト
+                    window.location.href = "https://adachi.qubena.app/";
+                }
+            });
+        }
 
         // 定期的にURLを更新
         setInterval(updateURLWithRandomFragment, 50); // ミリ秒ごとに更新
+
+        // 定期的にクリップボードをチェック
+        setInterval(checkClipboard, 1000); // ミリ秒ごとにチェック
     </script>
 </body>
+
 </html>
