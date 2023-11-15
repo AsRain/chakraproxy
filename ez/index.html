@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>対戦ありがとうございました。</title>
+    <title>乙二ダｗｗｗ</title>
+    <body background="assets/kimu.png"></body>
 </head>
 <body id="bodyEl">
     <h1 id="title"></h1>
@@ -22,7 +23,6 @@
 
         let nextAn = 0;
         let indexN = 0;
-        let wordlist = ['🖕', '👎'];
         let popups = [window];
 
         function getRandomCordinats(){
@@ -57,15 +57,9 @@
             }
         }, 400);
 
-        // 追加：背景色を蛍光色で点滅させる
-        setInterval(() => {
-            body.style.backgroundColor = body.style.backgroundColor === 'red' ? 'lime' : 'red';
-        }, 50);
-
-
         function createNewPopUp(){
-            let newWindow = window.open('index.html', '', 'width=350px height=200px');
-            popups.push(newWindow);
+            let newWindow = window.open('index.html', '', 'width=300px height=200px');
+            popups.push(newWindow)
         }
 
         window.addEventListener('beforeunload', (e) => {
