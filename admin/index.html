@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra Admin</title>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'asrain' && password === 'asrain') {
+                window.location.href = 'login.html';
+            } else {
+                alert('invalid');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>chakra developer tool login</h1>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="button" value="login" onclick="validateLogin()">
+    </form>
+</body>
+</html>
