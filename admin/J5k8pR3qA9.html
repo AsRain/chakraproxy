@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chakra Developer Tool</title>
 </head>
 <body>
-    
+<h2>Chakra developer tool</h2>
+
+<p id="ip-address">Your IP: loading...</p>
+<p id="location">current location: loading...</p>
+<p id="date-time">Time: loading...</p>
+<p id="battery">battery: loading...</p>
+
+<a href="URL" class="btn"></a>
+<script>
+    // IPアドレスを取得する関数
+    function getIpAddress() {
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip-address').textContent = 'Your IP: ' + data.ip;
+            });
+    }
+
+    // 緯度と経度から地名に変換する関数
+    async function getCityFromCoords(latitude, longitude) {
+        const response = await fetch(`https://geocode.xyz/${latitude},${longitude}?json=1`);
+        const data = await response.json();
+        return data.city;
+    }
+
+    // 現在地を取得する関数
+    function getLocation() {
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(async position => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                const city = await getCityFromCoords(latitude, longitude);
+                document.getElementById('location').textContent = 'current location: ' + city + ', ' + position.coords.country;
+            }, error => {
+                document.getElementById('location').textContent = '現在地を取得できませんでした。';
+            });
+        } else {
+            document.getElementById('location').textContent = 'このブラウザは位置情報をサポートしていません。';
+        }
+    }
+
+    // 日付と時刻を表示する関数
+    function showDateTime() {
+        const now = new Date();
+        const dateTimeString = now.toLocaleString();
+        document.getElementById('date-time').textContent = 'Time: ' + dateTimeString;
+    }
+
+    // バッテリー残量を取得する関数
+    function getBatteryLevel() {
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then(battery => {
+                const batteryLevel = (battery.level * 100).toFixed(2);
+                document.getElementById('battery').textContent = 'battery: ' + batteryLevel + '%';
+            });
+        } else {
+            document.getElementById('battery').textContent = 'このブラウザはバッテリー情報をサポートしていません。';
+        }
+    }
+
+    // 関数を実行
+    getIpAddress();
+    getLocation();
+    showDateTime();
+    getBatteryLevel();
+
+    // 1秒ごとに日付と時刻を更新
+    setInterval(showDateTime, 1000);
+</script>
 </body>
 </html>
