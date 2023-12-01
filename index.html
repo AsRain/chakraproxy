@@ -70,6 +70,7 @@
         .feature8 { background-image: url('texture/rr.png'); }
         .feature9 { background-image: url('texture/mc.png'); }
         .feature10 { background-image: url('texture/lap.png'); }
+        .feature11 { background-image: url('texture/3.5.png'); }
 
         .announcement2 { background-image: url('texture/ank.png'); }
         .announcement3 { background-image: url('texture/line.png'); }
@@ -96,6 +97,22 @@
         background-color: rgba(198, 197, 255, 0.258);
         transform: translateX(10px);
         }
+
+        html {
+    font-family: sans-serif;
+    }
+
+    a {
+     color: #999;
+     text-decoration: none;
+    }
+
+    ul {
+    list-style: none;
+    padding: 0;
+    }
+
+
     </style>
 </head>
 <body>
@@ -104,14 +121,15 @@
         <h1>Chakra</h1>
     </header>
     <section>
-        <h3>12/15までにv2復活検討</h3>
+        <h3>もう12月とかやばくね</h3>
+        <p>(新バージョンのProxyも考えてます)</p>
     </section>
     <section id="announcements">
         <h2>お知らせ / アナウンス</h2>
         <div class="announcement-box" onclick="location.href='https://forms.gle/AvYaG8TPLeVVvEJP9'">
             <div class="box-image announcement2"></div>
             <div class="box-text">
-                <h3>お問い合わせ / 意見</h3>
+                <h3>お問い合わせフォーム</h3>
                 <p>個別返信希望の方は、下にあるLINEよりお願いいたします。</p>
             </div>
         </div>
@@ -132,19 +150,19 @@
 
     </section>
     <section id="features">
-        <h2>機能 (7)</h2>
-        <div class="feature-box" onclick="location.href='feature/lap/index.html'">
-            <div class="box-image feature10"></div>
-            <div class="box-text">
-                <h3>長距離走ラップタイム計算ツール</h3>
-                <p>ラップタイムを自動で計算してくれます</p>
-            </div>
-        </div>
+        <h2>ツール</h2>
         <div class="feature-box" onclick="location.href='https://v3.prx-chakron.lol/'">
             <div class="box-image feature1"></div>
             <div class="box-text">
-                <h3>ChakraProxy</h3>
+                <h3>ChakraProxy v3</h3>
                 <p>フィルタリング回避ツールです</p>
+            </div>
+        </div>
+        <div class="feature-box" onclick="location.href='article/v3/index.html'">
+            <div class="box-image feature11"></div>
+            <div class="box-text">
+                <h3>v3を高速で使う方法</h3>
+                <p>知らない人多そうだから</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='https://nv6zmy-3000.csb.app/'">
@@ -179,7 +197,14 @@
             <div class="box-image feature9"></div>
             <div class="box-text">
                 <h3>Minecraft</h3>
-                <p>サイト上でMinecraft Java版をマルチプレイできます！！</p>
+                <p>サイト上でMinecraft Java版プレイできます (マルチ可)</p>
+            </div>
+        </div>
+        <div class="feature-box" onclick="location.href='feature/lap/index.html'">
+            <div class="box-image feature10"></div>
+            <div class="box-text">
+                <h3>長距離走ラップタイム計算ツール</h3>
+                <p>ラップタイムを自動で計算してくれます</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='feature/roulette/index.html'">
@@ -190,15 +215,5 @@
             </div>
         </div>
     </section>
-    <section>
-        <h3>開発者ツール</h3>
-        <div class="feature-box" onclick="location.href='admin/index.html'">
-            <div class=""></div>
-            <div class="box-text">
-                <h3>ログイン</h3>
-            </div>
-        </div>
-    </section>
-
 </body>
 </html>
