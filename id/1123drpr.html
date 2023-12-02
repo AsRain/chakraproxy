@@ -1,9 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Refresh with Scroll Position</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+      height: 2000px; /* 適当な高さのコンテンツを追加 */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>チャット</h2>
+  <p>自動更新は入力する際以外は 有効にしてください。 (入力する際はチェックを外してください)</p>
+  <label for="refreshToggle">自動更新</label>
+  <input type="checkbox" id="refreshToggle" onchange="toggleRefresh()" checked> <!-- トグル用のチェックボックス -->
+
+  <script>
+    var refreshInterval; // インターバル用の変数
+    var checkbox = document.getElementById('refreshToggle');
+
+    // ローカルストレージから状態を取得
+    var isChecked = localStorage.getItem('autoRefresh') === 'true';
+    checkbox.checked = isChecked;
+
+    // スクロール位置をセッションストレージから取得
+    var scrollPosition = sessionStorage.getItem('scrollPosition') || 0;
+
+    // ページ読み込み時にスクロール位置を復元
+    window.scrollTo(0, scrollPosition);
+
+    function toggleRefresh() {
+      isChecked = checkbox.checked;
+      localStorage.setItem('autoRefresh', isChecked);
+
+      if (isChecked) {
+        // チェックされている場合は3秒ごとにリロードするインターバルを設定
+        refreshInterval = setInterval(function() {
+          // 現在のスクロール位置をセッションストレージに保存
+          sessionStorage.setItem('scrollPosition', window.scrollY);
+          location.reload();
+        }, 5000);
+      } else {
+        // チェックが外れている場合はインターバルをクリア
+        clearInterval(refreshInterval);
+      }
+    }
+
+    // ページ読み込み時に初期設定を反映
+    toggleRefresh();
+  </script>
+
+</body>
+</html>
+
+
 <!-- customize labels of htmlcommentbox.com -->
 <script>
     // This code goes ABOVE the main HTML Comment Box code!
     // replace the text in the single quotes below to customize labels.
     hcb_user = {
-        comments_header : 'チャット (相手が送信しても自動更新されないため定期的に再読み込みしてください',
+        comments_header : '　',
         name_label : 'お名前',
         content_label: 'テキストを入力...',
         submit : 'コメントする',
