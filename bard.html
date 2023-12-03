@@ -120,7 +120,7 @@
           document.getElementById("response").textContent = data.text;
         })
         .catch(error => {
-          document.getElementById("errorMessage").textContent = 'エラーが発生しました: ' + error.message;
+          document.getElementById("errorMessage").textContent = '答えられない質問内容または特殊記号が含まれている可能性があります、質問内容を変えてお試しください。: ' + error.message;
           document.getElementById("errorMessage").style.display = "block";
         })
         .finally(() => {
