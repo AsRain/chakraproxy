@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
-  <body style="background-color:#3a3a3a;"></body>
+  <body style="background-color:#002d5a;"></body>
   <title>chatroom</title>
   <style>
     body {
@@ -26,7 +26,7 @@
   <h2>チャットルーム</h2>
   <label for="refreshToggle">チャットの自動更新 (5秒毎) ➡</label>
   <input type="checkbox" id="refreshToggle" onchange="toggleRefresh()" checked>
-  <p>自動更新は入力中以外は有効にしてください (入力中は外してください)</p>
+  <p>自動更新は入力中以外は有効にしてください<br>そうしないと相手のチャットが取得できません (入力中は外してください)</p>
 
   <script>
     var refreshInterval;
@@ -65,16 +65,16 @@
     // replace the text in the single quotes below to customize labels.
     hcb_user = {
         comments_header : ' ',
-        name_label : 'お名前',
-        content_label: 'テキストを入力...',
-        submit : '送信',
+        name_label : '名前 (ログインして固定可)',
+        content_label: 'メッセージを入力...',
+        submit : 'メッセージを送信！',
         logout_link : '',
         admin_link : '',
         no_comments_msg: '',
-        add:'コメントを追加する',
-        again:'さらにコメントを入力する',
+        add:'メッセージを追加する',
+        again:'さらにメッセージを入力する',
         rss:'',
-        said:'さんのコメント',
+        said:'さんのメッセージ',
         prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
         next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
         showing:'Showing',
