@@ -3,255 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <title>Chakra | HOME</title>
+    <title>Chakra | 回答</title>
     <link rel="icon" href="texture/logo.ico">
-    <link rel="apple-touch-icon" href="texture/logo.png">
     <style>
-
-        body {
-            font-family: 'Zen Maru Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ebeefa;
-        }
-
-        header {
-            background-color: #6b6bc2;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        nav {
-        text-align: right;
-        }
-
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.259);
-        }
-
-        h2, h3 {
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        h3 {
-            font-size: 20px;
-        }
-
-        p {
-            margin: 5px 0;
-        }
-
-        .box-image {
-            width: 50px;
-            height: 50px;
-            background-size: cover;
-            margin-right: 10px;
-        }
-
-        .feature1 { background-image: url('texture/v3.png'); }
-        .feature2 { background-image: url('texture/history.png'); }
-        .feature3 { background-image: url('texture/game.png'); }
-        .feature4 { background-image: url('texture/v2.png'); }
-        .feature7 { background-image: url('texture/yt.png'); }
-        .feature8 { background-image: url('texture/rr.png'); }
-        .feature9 { background-image: url('texture/mc.png'); }
-        .feature10 { background-image: url('texture/lap.png'); }
-        .feature11 { background-image: url('texture/3.5.png'); }
-        .feature12 { background-image: url('texture/his.png'); }
-        .feature13 { background-image: url('texture/bard.png'); }
-        .feature14 { background-image: url('texture/id.png'); }
-
-        .announcement2 { background-image: url('texture/ank.png'); }
-        .announcement3 { background-image: url('texture/line.png'); }
-        .announcement4 { background-image: url('texture/ans.png'); }
-        .announcement5 { background-image: url('texture/dsc.png'); }
-        .announcement6 { background-image: url('texture/why.png'); }
-        .announcement7 { background-image: url('texture/suika.png'); }
-
-        .box-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-box, .announcement-box {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            position: relative;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        .feature-box:hover, .announcement-box:hover {
-        background-color: rgba(198, 197, 255, 0.258);
-        transform: translateX(10px);
-        }
-
-        html {
-    font-family: sans-serif;
-    }
-
-    a {
-     color: #999;
-     text-decoration: none;
-    }
-
-    ul {
-    list-style: none;
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    }
+    background-color: #f8f8f8;
+}
 
+h1 {
+    text-align: center;
+    padding: 15px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.qa {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.answer {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* 戻るボタンのスタイル */
+.back-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
 
     </style>
 </head>
 <body>
-    <header onclick="location.href='index.html'">
+    <a href="index.html" class="back-button">戻る</a>
 
-        <h1>Chakra</h1>
-    </header>
-    <section>
-       <h3>v5公開しました > 安定してる + 高速　なはずです</h3>
-    </section>
-    <section id="announcements">
-        <h2>お知らせ / アナウンス</h2>
-        <div class="announcement-box" onclick="location.href='https://forms.gle/9RNdznzAnnCY9EYw5'">
-            <div class="box-image announcement2"></div>
-            <div class="box-text">
-                <h3>お問い合わせフォーム</h3>
-                <p>LINEからでもお問い合わせいただけます</p>
-            </div>
+    <div class="qa">
+        <h2>V3の速度が遅い...? 仕様だったらすいません！</h2>
+        <div class="answer">
+            <p>直しました、ご報告ありがとうございます！</p>
         </div>
-        <div class="announcement-box" onclick="location.href='answer.html'">
-            <div class="box-image announcement4"></div>
-            <div class="box-text">
-                <h3>お問い合わせフォームの回答</h3>
-                <p>上のフォームに来た内容について回答します</p>
-            </div>
-        </div>
-        <div class="announcement-box" onclick="location.href='line.html'">
-            <div class="box-image announcement3"></div>
-            <div class="box-text">
-                <h3>LINE</h3>
-                <p>LINEグループへの参加や個別お問い合わせ、寄付等</p>
-            </div>
-        </div>
-    </section>
+    </div>
 
-        <section> 
-        <h2>ブログ</h2>
-        <div class="feature-box" onclick="location.href='article/2/index.html'">
-            <div class="box-image feature11"></div>
-            <div class="box-text">
-                <h3>学校のPCで個人のSNSアカウントにログインする方法</h3>
-                <p>ほぼすべてのSNSアカウントにログインできます</p>
-            </div>
+    <div class="qa">
+        <h2>会話の話題を出してくれるルーレットがほしいです！</h2>
+        <div class="answer">
+            <p>ルーレット機能を作りました。ChatGPTで会話の話題を自動生成する機能も検討中です</p>
         </div>
-        <div class="feature-box" onclick="location.href='article/3/index.html'">
-            <div class="box-image feature12"></div>
-            <div class="box-text">
-                <h3>履歴を完全に削除する方法！！</h3>
-                <p>履歴を完全に消すことができます</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='article/4/index.html'">
-            <div class="box-image announcement7"></div>
-            <div class="box-text">
-                <h3>学校でスイカゲームをする方法</h3>
-                <p>すいかげーむです</p>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>プロキシ</h2>
-        <div class="feature-box" onclick="location.href='https://prx-chakron.lol/'">
-            <div class="box-image feature1"></div>
-            <div class="box-text">
-                <h3>ChakraProxy v5</h3>
-                <p>フィルタリング回避ツールです</b></p>
+    <div class="qa">
+        <h2>チャットだけでなく電話の機能がほしいです</h2>
+        <div class="answer">
+            <p>学校で電話するってこと...?<br>
+                あまり実用性がないので実装する予定はありません、すみません。</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>前のやつであったボタン一つで先生に見られてもだいじょぶなやつほしい</h2>
+        <div class="answer">
+            <p>わかりました、近々実装する予定ですのでお待ちください</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>AV見たい</h2>
+        <div class="answer">
+            <p>ChakraProxyで開いてもらえれば見れます。 (V3はR18コンテンツにアクセスできないので、V2をご利用ください)</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>けびな以外もスパムしたい</h2>
+        <div class="answer">
+            <p>スパムモードに新たに Google と カスタム を追加しました。</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>サイトのバージョンをマイクラみたいに数値化したら（例V1.19.4など）わかりやすいです！</h2>
+        <div class="answer">
+            <p>今後、ホームの更新情報欄に今後記載していこうと思います！</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>先生が履歴のサイトを開くことはないんですか、あったらニセキュビナバレませんか? 履歴削除が欲しいです。</h2>
+        <div class="answer">
+                <p>そうですね、僕が考えた案はchakron.lol経由で履歴スパムを開いたら通常通り使えて、それ以外(履歴からのアクセスも含む)からアクセスしたらQubena(本物)にリダイレクトするという方法ですが僕の技術じゃできませんでしたｗ とりあえず実装できるように試行錯誤しています。<br>
+                履歴削除については、フィルタリング側ではなくGoogle側で行われているので不可能です。その代理案として履歴スパムを作りました。</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>ブロックされても解除してるけどどういう仕組みなの?</h2>
+        <div class="answer">
+                <p>普通にドメイン変えてるだけです。 (ドメインはgoogle.comとか。このサイトだとchakron.lol)<br>
+                学校のフィルタリングはサイト内はチェックせずにURLで判別してブロックしています。なのでドメインを変えるだけでブロックは解除...というか回避できます。</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>アルバムのアプリとかほしい学校の雰囲気で写真撮りたいんでスマホに移せる</h2>
+        <div class="answer">
+                <p>撮った写真を転送するのにphpなどを使わないといけないので複雑です...考えときますがGoogleDriveに写真を入れたほうが速いと思います。</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>音楽聴きたい</h2>
+        <div class="answer">
+                <p>Youtubeとかで聞いてください</p>
+        </div>
+    </div>
+
+    <div class="qa">
+        <h2>漫画サイトの漫画を読めるようにしてほしいです</h2>
+        <div class="answer">
+                <p>ChakraProxyで漫画サイトを開いたらできると思います。<br>
+                (漫画サイトがProxy使っても読めないってこと？)</p>
             </div>
         </div>
 
-        <div class="feature-box" onclick="location.href='feature/chakraproxy/index.html'">
-            <div class="box-image feature4"></div>
-            <div class="box-text">
-                <h3>ChakraProxy v2</h3>
-                <p>旧ChakraProxyです、v5の使用をおすすめします</p>
-            </div>
+    <div class="qa">
+        <h2>V3で安全なサイトじゃないとでるけどだいじょうぶですか</h2>
+            <div class="answer">
+            <p>v3.prx-chakron.lolがchakron.lolの偽サイトと誤解されているだけなので問題ないです。</p>
         </div>
-        </section>
+    </div>
+    
+    <div class="qa">
+        <h2>Minecraftのテクスチャの変え方、MODの入れ方、スキン作成機能</h2>
+            <div class="answer">
+            <p>全部できないですね、Minecraftの更新をする予定はないです。</p>
+        </div>
+    </div>
 
-    <section id="features">
-        <h2>ツール</h2>
-        <div class="feature-box" onclick="location.href='bard.html'">
-            <div class="box-image feature13"></div>
-            <div class="box-text">
-                <h3>Bard (AI)</h3>
-                <p>質問を入力するとAIが回答してくれます！</p>
+    <div class="qa">
+        <h2>なんでこんな、作るのも大変そうなサイトをつくったんですか?<br>
+            Discordやっていますか? フレンドにしたいだけです。やってなかったらごめんなさい。</h2>
+        <div class="answer">
+                <p>サイトを作る練習です。まあ今後サイト作る予定ないですがｗ<br>
+                discordは ral.n です。</p>
             </div>
         </div>
-        <div class="feature-box" onclick="location.href='id/index.html'">
-            <div class="box-image feature14"></div>
-            <div class="box-text">
-                <h3>チャット</h3>
-                <p>知っている人同士でのみチャットでき、他の人は会話内容を見ることはできません</p>
+
+        <div class="qa">
+            <h2>質問でしっかり答えられるところを尊敬しています。ミネクラフトのバージョンはかわりませんか？変わるなら、1.7.3くらいがいいです
+                </h2>
+            <div class="answer">
+                    <p>ありがとう。そして変えられません、すみません。</p>
+                </div>
             </div>
-        </div>
-        <div class="feature-box" onclick="location.href='feature/history/index.html'">
-            <div class="box-image feature2"></div>
-            <div class="box-text">
-                <h3>履歴スパム</h3>
-                <p>履歴を見られたくない時に使える、履歴を埋めることができるツールです！</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='https://in1.清風.com/'">
-            <div class="box-image feature7"></div>
-            <div class="box-text">
-                <h3>Youtube (idとパスワードは両方「si」)</h3>
-                <p>広告なしで高速でYoutubeが見れます！</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='https://sites.google.com/view/newchakra/'">
-            <div class="box-image feature3"></div>
-            <div class="box-text">
-                <h3>ゲーム</h3>
-                <p>楽しいゲームをたくさん集めました！ ダウンロード不要 / サイト上ですぐにプレイ可能</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='Minecraft/index.html'">
-            <div class="box-image feature9"></div>
-            <div class="box-text">
-                <h3>Minecraft</h3>
-                <p>サイト上でMinecraft Java版プレイできます (マルチ可)</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='feature/lap/index.html'">
-            <div class="box-image feature10"></div>
-            <div class="box-text">
-                <h3>長距離走ラップタイム計算ツール</h3>
-                <p>ラップタイムを自動で計算してくれます</p>
-            </div>
-        </div>
-    </section>
-    <section>
-    <script type="text/javascript" src="https://www.stat-counter.org/count/de9g"></script><br>
- <a href='https://www.versicherungen.at/hausversicherung-rechner/'>Haushaltsversicherung Haus</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=56af85d5c2b49d464efecfeb3b69f41f11d02923'></script>
-</section>
-</body>
+
+            <div class="qa">
+                <h2>v3でConnecting to server... An error occurred while trying to connect to the server. Please refresh the page and try againと出ます。
+                    </h2>
+                <div class="answer">
+                        <p>(訳: 接続エラー 再読み込みして。それでも無理なら回線確認して時間置いてみて)</p>
+                    </div>
+                </div>
+
+                <div class="qa">
+                    <h2>v2をまた使いたい
+                        </h2>
+                    <div class="answer">
+                            <p>v2治らないから代理サイト置いときます</p>
+                        </div>
+                    </div>
+
+                        <div class="qa">
+                            <h2>やはり治りません、、、</h2>
+                            <div class="answer">
+                                    <p>名前が記載されてないので何を示してるのかわからないです</p>
+                                </div>
+                            </div>
+
+                            <div class="qa">
+                                <h2>スマホアプリなどを追加できますか</h2>
+                                <div class="answer">
+                                        <p>できないです</p>
+                                    </div>
+                                </div>
+
+                                <div class="qa">
+                                    <h2>ちくっていい笑</h2>
+                                    <div class="answer">
+                                            <p>先生認知してるから今更ちくっても意味ないよ笑</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="qa">
+                                    <h2>少し前に「v3でConnecting to server... An error (～略)」と質問したものです。あの表記が出てから、しばらく経ちますが、未だに治りませんん。サーバーの接続中にエラーが発生するということは、貴殿のサーバーになにか問題が発生しているのでしょうか、他にこのサイトを訪問する人は、私のようにならないのでしょうか？</h2>
+                                    <div class="answer">
+                                            <p>サーバーにエラーは発生してませんし、他の人は普通に使えてますね...<br>
+                                            もしかしたらクッキーを削除したら治るかもしれません。<br><br>
+                                        <b>履歴を開きます。閲覧履歴データの削除をクリックして、期間は全期間、Cookieと他のサイトのデータにチェックを入れて削除してください </b><br><br>
+                                    これでも治らない場合は学校で呼んでもらえれば原因がわかるかもしれません、また新しいバージョンのプロキシも検討しているので待ってもらえたらと思います</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="qa">
+                                        <h2>なんの機器でこのサーバーを開いたのですか？。レンタルサーバーですか？。それとも貧弱な普通のパソコンですか？</h2>
+                                        <div class="answer">
+                                                <p>レンタルサーバーです</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="qa">
+                                            <h2>チャットのIDを持っていない人のメッセージの受け取り方
+                                            </h2>
+                                            <div class="answer">
+                                                    <p>IDは全員が持っている必要はありません。<br>
+                                                    例えばAさん(ID持ち)のチャットにBさん(IDなし)が参加した場合、BさんはAさんのIDを入力すればチャットに参加できます。</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="qa">
+                                                <h2>えっと他の人から送ってもらったメッセージをどうやって見るかを知りたいんですけど...</h2>
+                                                <div class="answer">
+                                                        <p>...? ごめん他の人にも聞いてみたけどよくわからない<br>
+                                                            普通にチャットに参加したら相手のメッセージ見れますよ?</p>
+                                                        <p>このチャットはLINEでいう個人チャットのようなものではなくグループチャットみたいな感じです。ID=招待リンク的な</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="qa">
+                                                    <h2>学年順位何位？</h2>
+                                                    <div class="answer">
+                                                            <p>普通くらい</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="qa">
+                                                        <h2>V2残して</h2>
+                                                        <div class="answer">
+                                                                <p>わかりました。</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="qa">
+                                                            <h2>ユーチューブ専用サイトのID入れる画面が出てきてよくわからないから入れないので解決方法を教えてください</h2>
+                                                            <div class="answer">
+                                                                    <p>タイトルに書いてます、表記がわかりにくかったかな(書き直しときます)<br>
+                                                                        IDとパスワード両方「si」です</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="qa">
+                                                                    <h2>インスタ始めてください</h2>
+                                                                    <div class="answer">
+                                                                            <p>ごめん回答するの忘れた...<br>
+                                                                            ...俺がってこと?? 一応やってますが見専です</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="qa">
+                                                                            <h2>Web server is returning an unknown error　これがV2ででる</h2>
+                                                                            <div class="answer">
+                                                                                    <p>時間置いてやり直してみて。それか新しいv5を使ってみてください</p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="qa">
+                                                                                    <h2>*****というidを取得したい。</h2>
+                                                                                    <div class="answer">
+                                                                                            <p>追加しておきました</p>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="qa">
+                                                                                            <h2>IDってなに？</h2>
+                                                                                            <div class="answer">
+                                                                                                    <p>チャットの招待ID的な</p>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                                <div class="qa">
+                                                                                                    <h2>彼女っていたりしますか...?</h2>
+                                                                                                    <div class="answer">
+                                                                                                            <p>がち泣くよ</p>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div class="qa">
+                                                                                                            <h2>最近返信適当になってる？ｗ</h2>
+                                                                                                            <div class="answer">
+                                                                                                                    <p>うるさいわぼけー</p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                                                                                                                                                
+                                                                                                                <div class="qa">
+                                                                                                                    <h2>普通に目元きれい 女装したら絶対かわいい</h2>
+                                                                                                                    <div class="answer">
+                                                                                                                            <p>性癖こすりつけないでｗ</p>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                
 </html>
