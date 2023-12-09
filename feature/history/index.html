@@ -1,7 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>履歴スパムツール</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakra | Mode</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap">
+    <style>
+        body {
+            font-family: 'Kosugi', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            font-family: 'Kosugi', sans-serif;
+            background-color: #864caf;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease; /* ホバーアニメーションの設定 */
+        }
+
+        button:hover {
+            background-color: #4c45a0;
+        }
+    </style>
     <script>
         function copyToClipboard(text) {
             const input = document.createElement('input');
@@ -21,7 +57,7 @@
 <body>
     <h1>モードを選択してください</h1>
     <button onclick="handleClickAndRedirect('accesskey_qubena', 'qubena.html')">Qubena</button>
-    <button onclick="handleClickAndRedirect('accesskey_google', 'google.html')">Google</button>
+    <button onclick="handleClickAndRedirect('accesskey_google', 'google.html')">Google Search</button>
     <button onclick="handleClickAndRedirect('accesskey_custom', 'custom.html')">カスタム</button>
 </body>
 </html>

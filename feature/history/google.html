@@ -2,13 +2,58 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Google</title>
+    <title id="dynamicTitle">Google</title>
     <link rel="shortcut icon" href="google_icon-icons.com_62736.ico">
 </head>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    h1 {
+        color: #008080;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #008080;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        background-color: #005555;
+    }
+
+    #currentTitle {
+        margin-top: 10px;
+    }
+</style>
 <body>
-    <h1>履歴スパムツール</h1>
-    <p>履歴をスパム中...<br>
-    少しだけ放置した後、履歴を見てみてください！</p>
+    <h1>Google Search</h1>
+    <h2>種類少ししかないのでフォーム等で他にも送ってくれると助かります (例: ヒートアイランド現象とは, 染色液 何によく染まる)</h2>
+    <p>実行中です...<br>
+    少し放置した後履歴を確認してみてください</p>
+
+    <div id="currentTitle"></div>
 
     <!-- 戻るボタンを設置 -->
     <button onclick="goToChakraProxy()">戻る</button>
@@ -25,17 +70,25 @@
         }
 
         function updateURLWithRandomFragment() {
-            const randomString = generateRandomString(10); // 文字のランダムな文字列を生成
+            const randomString = generateRandomString(10);
             window.location.hash = randomString;
         }
 
-        function goToChakraProxy() {
-            // chakraproxy.xyzにリダイレクト
-            window.location.href = "https://chakron.lol/";
+        function updateTitleWithRandomTitle() {
+            const titles = ['1次関数 変化の割合 | Google検索', '1次関数 式 | Google検索', '1次関数 反比例 式 求め方 | Google検索' , '三角形の合同条件 | Google検索' , '鋭角と鈍角の違い | Google検索' , 'アミラーゼ 何に働く | Google検索' , '現代語訳 一覧 | Google検索' , '光合成 条件 | Google検索' , '温暖前線 寒冷前線 何が違う | Google検索' , '消化と吸収の違い' , 'リアス海岸 特徴'];
+            const randomTitle = titles[Math.floor(Math.random() * titles.length)];
+            document.getElementById('dynamicTitle').innerText = randomTitle;
+
+            // 現在のタイトルを表示
+            document.getElementById('currentTitle').innerText = `Info: ${randomTitle}`;
         }
 
-        // 定期的にURLを更新
-        setInterval(updateURLWithRandomFragment, 50); // ミリ秒ごとに更新
+        function goToChakraProxy() {
+            window.location.href = "../../index.html";
+        }
+
+        setInterval(updateURLWithRandomFragment, 50);
+        setInterval(updateTitleWithRandomTitle, 50);
     </script>
 </body>
 </html>
