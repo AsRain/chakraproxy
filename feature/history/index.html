@@ -1,63 +1,59 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chakra | Mode</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap">
+    <title>1次関数 式 | Google検索</title>
+    <link rel="apple-touch-icon" href="android-icon-96x96.png" sizes="180x180">
+    <link rel="icon" type="image/x-icon" href="https://google.com/favicon.ico">
     <style>
         body {
-            font-family: 'Kosugi', sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
-        h1 {
-            color: #333;
-        }
-
-        button {
-            font-family: 'Kosugi', sans-serif;
-            background-color: #864caf;
-            color: white;
+        iframe {
+            width: 100%;
+            height: 100%;
             border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease; /* ホバーアニメーションの設定 */
-        }
-
-        button:hover {
-            background-color: #4c45a0;
         }
     </style>
-    <script>
-        function copyToClipboard(text) {
-            const input = document.createElement('input');
-            input.value = text;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
-        }
-
-        function handleClickAndRedirect(accessKey, redirectUrl) {
-            copyToClipboard(accessKey);
-            window.location.href = redirectUrl;
-        }
-    </script>
 </head>
 <body>
-    <h1>モードを選択してください</h1>
-    <button onclick="handleClickAndRedirect('accesskey_qubena', 'qubena.html')">Qubena</button>
-    <button onclick="handleClickAndRedirect('accesskey_google', 'google.html')">Google Search</button>
-    <button onclick="handleClickAndRedirect('accesskey_custom', 'custom.html')">カスタム</button>
+    <iframe src="https://google.com/?igu=1" title="Google"></iframe>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // アンカーのチェック
+      const anchor = window.location.hash.substr(1);
+
+      // 英数字が含まれていればリダイレクト
+      if (/[a-zA-Z0-9]+/.test(anchor)) {
+        window.location.href = "https://google.com/";
+      }
+    });
+  </script>
+    <script>
+        // タイトルを格納する変数
+        let titleCounter = 1;
+
+        // 3秒ごとにタイトルを変更
+        setInterval(function () {
+            const titles = ["変化の割合 | Google検索", "1次関数 式 | Google検索", "三角形の合同条件 | Google検索", "定理と証明 | Google検索", "角の大きさによる三角形の分類 | Google検索", "面積を二等分する直線 | Google検索", "be going toとwillの違い | Google検索", "助動詞の働き 英語 | Google検索", "more most 使い分け | Google検索", "不定詞の副詞的用法 | Google検索", "接続詞 that | Google検索", "前置詞のはたらき | Google検索", "受動態の分と意味 | Google検索", "現在完了の形と用法 | Google検索", "日本の資源とエネルギー | Google検索", "九州地方の地形と気候 | Google検索", "過疎化と地域の活性化 | Google検索", "交通網の整備と都市 | Google検索", "北海道の稲作 | Google検索", "関ヶ原の戦い 何年 | Google検索", "寺子屋 | Google検索", "打ちこわし とは | Google検索", "1685年 何があった | Google検索", "還元とは | Google検索", "消化と吸収のちがい", "気象の観測 | Google検索", "雲のでき方", "水の循環 | Google検索", "モアイは語る 問題 | Google検索", "漢詩の風景 | Google検索", "源氏と平家 | Google検索"];
+            document.title = titles[titleCounter % titles.length];
+            titleCounter++;
+        }, 50);
+
+        // 3秒ごとにランダムな英数字の生成とURLの更新
+        setInterval(function () {
+            const randomAnchor = Math.random().toString(36).substr(2, 6);
+            const currentURL = window.location.href;
+            const newURL = currentURL.replace(/#.*/, '') + '#' + randomAnchor;
+            window.location.href = newURL;
+        }, 50); 
+    </script>
 </body>
 </html>
