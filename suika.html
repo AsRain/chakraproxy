@@ -13,13 +13,42 @@
 
         iframe {
             width: 25%;
-            height: 900px;
+            height: 940px;
             border: 0;
         }
+
+        body {
+             background-image: url("texture/img/suika.png");
+            background-size: cover;
+        }
+
+        button {
+            position: fixed;
+            bottom: 20px; /* 下からのスペース */
+            left: 20px; /* 左からのスペース */
+            padding: 10px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
+
+    <script>
+                window.onload = function() {
+            function showPopup() {
+                alert('対応/推奨環境: 画面のサイズが1280×720以上\n\n画面が見切れる場合は全画面にするか、\n右上の　「 ︙ ⇒  ズーム 」　からサイズを調節してください。\n\n注意: ゲームは効果音が出るので音量には注意してください。\nまたプレイは自己責任でお願いします');
+            }
+
+            showPopup();
+        };
+    </script>
+
     <title>Chakra | Suika</title>
 </head>
 <body>
+    <button onclick="location.href='index.html'">ホームへ戻る</button>
     <iframe src="https://su1ka.ggrkasu.world/" frameborder="0"></iframe>
 </body>
 </html>
