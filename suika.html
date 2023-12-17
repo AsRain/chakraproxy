@@ -22,17 +22,24 @@
             background-size: cover;
         }
 
-        button {
+        .action-button {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
             padding: 10px;
-            background-color: #3498db;
             color: #ffffff;
             border: none;
             cursor: pointer;
             border-radius: 5px;
         }
+
+        #fullscreenButton {
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #cc382e;
+        }
+
     </style>
 
     <script>
@@ -43,12 +50,20 @@
 
             showPopup();
         };
+
+                function toggleFullscreen() {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else {
+                document.documentElement.requestFullscreen();
+            }
+        }
     </script>
 
     <title>Chakra | Suika</title>
 </head>
 <body>
-    <button onclick="location.href='index.html'">ホームへ戻る</button>
+    <button id="fullscreenButton" class="action-button" onclick="toggleFullscreen()">全画面にする</button>
     <iframe src="https://su1ka.ggrkasu.world/" frameborder="0"></iframe>
 </body>
 </html>
