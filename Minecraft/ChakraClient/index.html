@@ -77,6 +77,16 @@
 		<input class="starter" type="button" value="Launch" onclick="Start();" />
 	</div>
 	<script type="text/javascript">
+		window.onload = function() {
+    	document.querySelector('.starter').click();
+		};
+
+		window.onload = function() {
+    	// デフォルトで "Modified 1.17+" を選択する
+    	document.querySelector('#Packs [value="modifiednew"]').selected = true;
+    	document.querySelector('.starter').click();
+		};
+
 		if (document.location.href.startsWith("file:")) {
 			alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation.");
 		} else {
