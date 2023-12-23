@@ -68,12 +68,17 @@
         button:hover {
             background-color: #0052cd;
         }
+
+        a {
+        text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <h1>チャット</h1>
-        <p>会話したい相手のIDを入力してください<br>IDを取得したい場合は、LINEまたはお問い合わせフォームより</p>
+        <Check>会話したいチャットルームのIDを入力してください<br>
+            ( IDを取得する場合はLINEまたはフォームまで ) </p>
 
         <label for="inputId"></label>
         <input type="text" id="inputId" placeholder="大文字小文字が間違っていると参加できないので注意">
@@ -83,7 +88,7 @@
     <script>
         function openChat() {
             var inputId = document.getElementById("inputId").value;
-            var url = "https://chakron.lol/id/" + inputId;
+            var url = "/id/" + inputId;
             window.open(url, "_blank");
         }
     </script>
