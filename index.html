@@ -12,11 +12,11 @@
             font-family: 'Zen Maru Gothic', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ebeefa;
+            background-color: rgb(250, 243, 235);
         }
 
         header {
-            background-color: #6b6bc2;
+            background-color: #d78334;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -69,10 +69,13 @@
         .feature5 { background-image: url('texture/his.png'); }
         .feature6 { background-image: url('texture/id.png'); }
         .feature7 { background-image: url('texture/3.png'); }
+        .feature8 { background-image: url('texture/screen.png'); }
 
         .announcement1 { background-image: url('texture/ank.png'); }
         .announcement3 { background-image: url('texture/line.png'); }
         .announcement2 { background-image: url('texture/ans.png'); }
+        .announcement2024 { background-image: url('texture/2024.png'); }
+        .announcement20242 { background-image: url('texture/20242.png'); }
 
         .box-text {
             display: flex;
@@ -90,7 +93,7 @@
         }
 
         .feature-box:hover, .announcement-box:hover {
-        background-color: rgba(198, 197, 255, 0.258);
+        background-color: rgba(255, 226, 197, 0.258);
         transform: translateX(10px);
         }
 
@@ -113,21 +116,14 @@
 </head>
 <body>
     <header onclick="location.href='index.html'">
-
         <h1>Chakra</h1>
     </header>
 
     <section>
-        <div style="width: 500px; height: 150px; text-align: center; display: flex; justify-content: center; align-items: center;">
-            <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-            <a href="https://logwork.com/countdown-4vb6" class="countdown-timer" data-style="circles" data-timezone="Asia/Tokyo" data-language="ja" data-date="2024-01-01 00:00" style="display: block; margin: 0 auto;">2024年まであと...</a>
-        </div>
-        
-             
+        <h1></h1>
     </section>
 
     <section id="announcements">
-
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1645569654176803"
      crossorigin="anonymous"></script>
 
@@ -157,6 +153,13 @@
 
     <section id="features">
         <h2>ツール</h2>
+        <div class="feature-box" onclick="location.href='screen.html'">
+            <div class="box-image feature8"></div>
+            <div class="box-text">
+                <h3>スクリーンショット</h3>
+                <p>ChromeBookのスクショができます！</p>
+            </div>
+        </div>
         <div class="feature-box" onclick="location.href='https://ch4kra.ggrkasu.world/'">
             <div class="box-image feature1"></div>
             <div class="box-text">
