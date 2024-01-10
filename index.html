@@ -13,11 +13,11 @@
             font-family: 'Zen Maru Gothic', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: rgb(235, 239, 250);
+            background-color: rgb(238, 235, 250);
         }
 
         header {
-            background-color: #3f88ad;
+            background-color: #6d3fad;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -100,7 +100,7 @@
         }
 
         .feature-box:hover, .announcement-box:hover {
-        background-color: rgba(197, 224, 255, 0.258);
+        background-color: rgba(219, 197, 255, 0.258);
         transform: translateX(10px);
         }
 
@@ -135,7 +135,7 @@
 	    z-index: 999;
         }
         .logo_fadein p {
-        font-size: 20px;
+        font-size: 50px;
 	    position: fixed;
 	    left: 50%;
 	    top: 50%;
@@ -151,10 +151,10 @@
         $(function() {
 	setTimeout(function(){
 		$('.logo_fadein p').fadeIn(1000);
-	},50);
+	},100);
 	setTimeout(function(){
 		$('.logo_fadein').fadeOut(1000);
-	},500);
+	},1300);
     });
     </script>
 
@@ -162,13 +162,17 @@
 <body> 
     
     <div class="logo_fadein">
-        <p>Copyright © Chakra. All rights reserved.</p>
+        <p><b>使用は自己責任で！</b></p>
       </div>
 
     <header>
         <h1>Chakra</h1>
-        
     </header>
+
+    <section>
+        <h3>土曜日からLINE限定の新サービス始めます (利用者少なそうだったらやめる)<br>
+            グループに入っていない方は対象外です</h3>
+    </section>
 
     <section id="announcements">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1645569654176803"
@@ -238,8 +242,8 @@
         <div class="feature-box" onclick="location.href='feature/chakraproxy/index.html'">
             <div class="box-image feature1"></div>
             <div class="box-text">
-                <h3>ChakraProxy v2</h3>
-                <p>制限なしでサイトを閲覧 / セーフサーチなし / ログイン可能 / 低速 </p>
+                <h3>ChakraProxy V2</h3>
+                <p>制限なしでサイトを閲覧 / セーフサーチなし / ログイン可能 / 低速</p>
             </div>
         </div>
         <div class="feature-box" onclick="location.href='https://yt.ggrkasu.world'">
@@ -252,7 +256,7 @@
         <div class="feature-box" onclick="location.href='feature/history/index.html'">
             <div class="box-image feature5"></div>
             <div class="box-text">
-                <h3>履歴スパム</h3>
+                <h3>履歴スパマー</h3>
                 <p>履歴を埋めることができます</p>
             </div>
         </div>
