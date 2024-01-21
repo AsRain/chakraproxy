@@ -1,288 +1,87 @@
-<!-- ようこそゴミコードへ -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <title>Chakra</title>
-    <link rel="icon" href="texture/logo.ico">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⠀</title>
+  <link rel="icon" href="favi.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Kosugi', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        body {
-            font-family: 'Zen Maru Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: rgb(235, 243, 250);
-        }
+    #container {
+      text-align: center;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 
-        header {
-            background-color: #34708e;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 20px;
-            cursor: pointer;
-        }
+    #passwordInput {
+      font-family: 'Kosugi', sans-serif;
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
 
-        header:hover {
-        color: #ffffff;
-        transition: color 0.5s;
-        }
+    #submitButton {
+      font-family: 'Kosugi', sans-serif;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
 
-        h1 {
-            margin: 0;
-        }
+    #submitButton:hover {
+      background-color: #2980b9;
+    }
 
-        nav {
-        text-align: right;
-        }
+    #errorMessage {
+      color: #ff6251;
+    }
 
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.259);
-        }
+    #spaceBelowLogo {
+      height: 30px;
+    }
 
-        h2, h3 {
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        h3 {
-            font-size: 20px;
-        }
-
-        p {
-            margin: 5px 0;
-        }
-
-        .box-image {
-            width: 50px;
-            height: 50px;
-            background-size: cover;
-            margin-right: 15px;
-        }
-
-        .feature1 { background-image: url('texture/v3.png'); }
-        .feature2 { background-image: url('texture/game.png'); }
-        .feature3 { background-image: url('texture/yt.png'); }
-        .feature4 { background-image: url('texture/mc.png'); }
-        .feature5 { background-image: url('texture/his.png'); }
-        .feature6 { background-image: url('texture/id.png'); }
-        .feature7 { background-image: url('texture/3.png'); }
-        .feature8 { background-image: url('texture/screen.png'); }
-        .feature9 { background-image: url('texture/gpt.png'); }
-
-        .announcement1 { background-image: url('texture/ank.png'); }
-        .announcement3 { background-image: url('texture/line.png'); }
-        .announcement2 { background-image: url('texture/ans.png'); }
-        .announcement2024 { background-image: url('texture/2024.png'); }
-        .announcement20242 { background-image: url('texture/20242.png'); }
-
-        .box-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-box, .announcement-box {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            position: relative;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        .feature-box:hover, .announcement-box:hover {
-        background-color: rgba(200, 200, 200, 0.258);
-        transform: translateX(10px);
-        }
-
-        html {
-        font-family: sans-serif;
-        }
-
-        a {
-        color: #999;
-        text-decoration: none;
-        }
-
-        ul {
-        list-style: none;
-        padding: 0;
-        }
-
-        #text {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .logo_fadein{
-	    background: #FFF;
-	    position: fixed;
-        align-items: center;
-        text-align: center;
-	    top: 0;
-	    left: 0;
-	    height: 100%;
-	    width: 100%;
-	    z-index: 999;
-        }
-        .logo_fadein p {
-        font-size: 50px;
-	    position: fixed;
-	    left: 50%;
-	    top: 50%;
-	    transform: translate(-50%, -50%);
-	    display: none;
-	    z-index: 9999;
-	    width: 1000px;
-        }
-    </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(function() {
-	setTimeout(function(){
-		$('.logo_fadein p').fadeIn(1000);
-	},100);
-	setTimeout(function(){
-		$('.logo_fadein').fadeOut(1000);
-	},1300);
-    });
-    </script>
-
+  </style>
 </head>
-<body> 
-    
-    <div class="logo_fadein">
-        <p><b>使用は自己責任で！</b></p>
-      </div>
+<body>
+  <div id="container">
+    <div id="spaceBelowLogo"></div>
+    <input type="password" id="passwordInput" placeholder="パスワード">
+    <button id="submitButton" onclick="checkPassword()">ログイン</button>
+    <p id="errorMessage"></p>
+  </div>
 
-    <header>
-        <h1>Chakra</h1>
-    </header>
+  <script>
+   function checkPassword() {
+      var passwordInput = document.getElementById('passwordInput').value;
+      var errorMessage = document.getElementById('errorMessage');
 
-    <section id="announcements">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1645569654176803"
-     crossorigin="anonymous"></script>
+      if (passwordInput === '1092') {
+        localStorage.setItem('chakralogin', 'true');
+        window.location.href = 'https://user.circula.lol';
+      } else {
+        errorMessage.innerHTML = '適当に打つなカス';
+      }
+    }
 
-        <h2>お知らせ / アナウンス</h2>
-        <div class="announcement-box" onclick="location.href='https://forms.gle/9RNdznzAnnCY9EYw5'">
-            <div class="box-image announcement1"></div>
-            <div class="box-text">
-                <h3>お問い合わせフォーム</h3>
-                <p>LINEからでも可能です</p>
-            </div>
-        </div>
-        <div class="announcement-box" onclick="location.href='answer.html'">
-            <div class="box-image announcement2"></div>
-            <div class="box-text">
-                <h3>お問い合わせフォームの回答</h3>
-                <p>フォームに来た内容の回答です</p>
-            </div>
-        </div>
-        <div class="announcement-box" onclick="location.href='line.html'">
-            <div class="box-image announcement3"></div>
-            <div class="box-text">
-                <h3>LINE</h3>
-                <p>LINEグループへの参加やお問い合わせなど...</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <h2>新機能</h2>
-        <div class="feature-box" onclick="location.href='feature/screen/index.html'">
-            <div class="box-image feature8"></div>
-            <div class="box-text">
-                <h3>スクリーンショット</h3>
-                <p>スクリーンショットを撮ることができます</p>
-            </div>
-        </div>
-
-        <div class="feature-box" onclick="location.href='#'">
-            <div class="box-image feature9"></div>
-            <div class="box-text">
-                <h3>coming soon...</h3>
-                <p>近日公開</p>
-            </div>
-        </div>
-
-        <div class="feature-box" onclick="location.href='#'">
-            <div class="box-image feature9"></div>
-            <div class="box-text">
-                <h3>coming soon...</h3>
-                <p>近日公開</p>
-            </div>
-        </div>
-
-        </section>
-
-    <section id="features">
-        <h2>ツール</h2>
-        <div class="feature-box" onclick="location.href='https://ch4kra.ggrkasu.world/'">
-            <div class="box-image feature1"></div>
-            <div class="box-text">
-                <h3>ChakraProxy v3</h3>
-                <p>制限なしでサイトを閲覧 / 高速 / セーフサーチは有効</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='feature/chakraproxy/index.html'">
-            <div class="box-image feature1"></div>
-            <div class="box-text">
-                <h3>ChakraProxy V2</h3>
-                <p>制限なしでサイトを閲覧 / セーフサーチなし / ログイン可能 / 低速</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='https://yt.ggrkasu.world'">
-            <div class="box-image feature3"></div>
-            <div class="box-text">
-                <h3>Youtube</h3>
-                <p>制限なし / 広告なしで閲覧可能</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='feature/history/index.html'">
-            <div class="box-image feature5"></div>
-            <div class="box-text">
-                <h3>履歴スパマー</h3>
-                <p>履歴を埋めることができます</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='id/index.html'">
-            <div class="box-image feature6"></div>
-            <div class="box-text">
-                <h3>チャットルーム</h3>
-                <p>IDを知っている人同士のみでチャット可能です</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='https://sites.google.com/view/newchakra/'">
-            <div class="box-image feature2"></div>
-            <div class="box-text">
-                <h3>ゲーム</h3>
-                <p>ダウンロード不要 / サイト上ですぐにプレイ可能</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='Minecraft/index.html'">
-            <div class="box-image feature4"></div>
-            <div class="box-text">
-                <h3>Minecraft</h3>
-                <p>Minecraft 1.5.2がサイト上で遊べます</p>
-            </div>
-        </div>
-        <div class="feature-box" onclick="location.href='suika.html'">
-            <div class="box-image feature7"></div>
-            <div class="box-text">
-                <h3>スイカゲーム</h3>
-                <p>ゴミ</p>
-            </div>
-        </div>
-    </section>
+    // ソースから特定しちゃうチー🤓 とか思ってんだろｗ
+  </script>
 </body>
 </html>
